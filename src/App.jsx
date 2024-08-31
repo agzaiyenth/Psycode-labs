@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Projects from "./components/ProjectsSection";
 import Services from "./components/Services";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Hero />
         <Benefits />
         <Collaboration />
+        <Projects/>
         <Services />
         <Contact />
         <Footer />
