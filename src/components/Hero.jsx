@@ -31,10 +31,10 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 mt-[3rem]">
           From websites to digital marketing, hosting to video, Psycode Labs delivers it all.
           </p>
-          <Button href="/pricing" white>
+          <Button href="reach-us">
             Get started
           </Button>
         </div>

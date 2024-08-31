@@ -66,7 +66,7 @@ const Projects = () => {
         speed={50}
         direction="right" 
       >
-                <div className="horizontal-slide-from-left-to-right flex w-[1161px] gap-x-6 pl-6">
+                <div className="horizontal-slide-from-left-to-right flex w-[1661px] gap-x-6 pl-6">
                   {projects.map((project) => (
                     <div
                       key={project.id}
@@ -75,7 +75,7 @@ const Projects = () => {
                       <img
                         src={project.imageUrl}
                         alt={project.title}
-                        className="w-full h-full object-contain"
+                        className="object-contain"
                       />
                     </div>
                   ))}
