@@ -61,26 +61,6 @@ const Projects = () => {
                 </h3>
               </div>
               <div className="flex flex-col gap-6 overflow-hidden rounded-[30px] bg-gradient-to-t from-[rgba(255,255,255,.1)] to-[rgba(0,0,0,0.5)] py-[10px]">
-              <Marquee
-        gradient={false} 
-        speed={50}
-        direction="left" 
-      >
-                <div className="horizontal-slide-from-right-to-left flex w-[1161px] gap-x-6 pl-6">
-                  {projects.map((project) => (
-                    <div
-                      key={project.id}
-                      className="flex h-[205px] items-center justify-center rounded-[10px]"
-                    >
-                      <img
-                        src={project.imageUrl}
-                        alt={project.title}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-                </Marquee>
                 <Marquee
         gradient={false} 
         speed={50}
