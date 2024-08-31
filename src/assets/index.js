@@ -55,6 +55,7 @@ import roadmap2 from "./roadmap/image-2.png";
 import roadmap3 from "./roadmap/image-3.png";
 import roadmap4 from "./roadmap/image-4.png";
 import undone from "./roadmap/undone.svg";
+import travels from "./travels.svg";
 
 import notification1 from "./notification/image-1.png";
 import notification2 from "./notification/image-2.png";
@@ -85,8 +86,11 @@ import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 import whatsapp from "./socials/whatsapp.svg";
 import linkedin from "./socials/linkedin.svg";
+import hospital from "./HospitalityPathLogo .svg";
 
 export {
+  hospital,
+  travels,
   linkedin,
   whatsapp,
   psysymbol,

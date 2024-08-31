@@ -11,6 +11,7 @@ import {
   benefitImage3,
   benefitImage4,
   benefitImage5,
+  travels,
   congress,
   facebook,
   figma,
@@ -24,6 +25,7 @@ import {
   notification4,
   photoshop,
   react,
+  hospital,
   sudath,
   tailwindcss,
   whatsapp,
@@ -84,6 +86,11 @@ export const companyurllogos=[
     id:"4",
     imagelink:sudath,
     companyurl:"https://sudathspeaks.lk/"
+  },
+  {
+    id:"5",
+    imagelink:hospital,
+    companyurl:"https://hospitalitypathriyadh.com/"
   },
 ]
 
@@ -325,12 +332,12 @@ export const ClientLogos=[
   },
   {
     id:"5",
-    imagelink:"#",
+    imagelink:hospital,
     companyurl:"https://hospitalitypathriyadh.com/"
   },
   {
     id:"6",
-    imagelink:"#",
+    imagelink:travels,
     companyurl:"https://www.ceylontravelstours.lk/"
   },
 ]
