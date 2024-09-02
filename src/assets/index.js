@@ -44,8 +44,6 @@ import service1 from "./services/service-1.png";
 import service2 from "./services/service-2.png";
 import service3 from "./services/service-3.png";
 
-import lines from "./pricing/lines.svg";
-import stars from "./pricing/stars.svg";
 
 import coins from "./roadmap/coins.png";
 import done from "./roadmap/done.svg";
@@ -87,14 +85,6 @@ import twitter from "./socials/twitter.svg";
 import whatsapp from "./socials/whatsapp.svg";
 import linkedin from "./socials/linkedin.svg";
 import hospital from "./HospitalityPathLogo .svg";
-import hosp from "./portfolio/hospitality.svg";
-import cong from "./portfolio/congress.svg";
-import cey from "./portfolio/ceylon.svg";
-import sud from "./portfolio/sudath.svg";
-import irosh from "./portfolio/iroshan.svg";
-import ezy from "./portfolio/ezy.svg";
-import ama from "./portfolio/amazingtribe.svg";
-import sar from "./portfolio/sarvodaya.svg";
 
 export {
   hosp,
