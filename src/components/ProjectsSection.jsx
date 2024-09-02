@@ -75,7 +75,7 @@ const Projects = () => {
                       <img
                         src={project.imageUrl}
                         alt={project.title}
-                        className="object-contain"
+                        className="object-contain "
                       />
                     </div>
                   ))}

@@ -32,7 +32,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 mt-[3rem]">
-          From websites to digital marketing, hosting to video, Psycode Labs delivers it all.
+          From websites to digital marketing, hosting to video, we delivers it all.
           </p>
           <Button href="reach-us">
             Get started
