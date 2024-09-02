@@ -89,9 +89,22 @@ import linkedin from "./socials/linkedin.svg";
 import hospital from "./HospitalityPathLogo .svg";
 import hosp from "./portfolio/hospitality.svg";
 import cong from "./portfolio/congress.svg";
-import cey from "./portfolio/ceylon.svg"
+import cey from "./portfolio/ceylon.svg";
+import sud from "./portfolio/sudath.svg";
+import irosh from "./portfolio/iroshan.svg";
+import ezy from "./portfolio/ezy.svg";
+import ama from "./portfolio/amazingtribe.svg";
+import sar from "./portfolio/sarvodaya.svg";
 
 export {
+  hosp,
+  cey,
+  sud,
+  cong,
+  irosh,
+  ezy,
+  ama,
+  sar,
   hospital,
   travels,
   linkedin,
