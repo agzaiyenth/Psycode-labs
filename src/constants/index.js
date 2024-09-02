@@ -260,46 +260,46 @@ export const projects = [
   {
     id: "0",
     title: "The Congress",
-    imageUrl: "/public/projects/1.png",
+    imageUrl: "projects/1.png",
     url: "https://thecongress.co/",
   },
   {
     id: "1",
     title: "Amazing Tribe",
     
-    imageUrl: "/public/projects/2.png",
+    imageUrl: "projects/2.png",
     url: "https://amazingtribe.lk/",
   },
   {
     id: "2",
     title: "Ezy Laundry",
     
-    imageUrl: "/public/projects/3.png",
+    imageUrl: "projects/3.png",
     url: "#",
   },
   {
     id: "3",
     title: "Fusion Store - Wedi",
     
-    imageUrl: "/public/projects/4.png",
+    imageUrl: "projects/4.png",
     url: "https://wedi.org.lk/",
   },
   {
     id: "4",
    title: "Sudath Speaks",
-    imageUrl: "/public/projects/5.png",
+    imageUrl: "projects/5.png",
     url: "https://sudathspeaks.lk/",
   },
   {
     id: "5",
     title: "Hospitality Path Riyadh",
-    imageUrl: "/public/projects/6.png",
+    imageUrl: "projects/6.png",
     url: "#",
   },
   {
     id: "6",
     title: "Ceylon Travels & Tours",
-    imageUrl: "/public/projects/7.png",
+    imageUrl: "projects/7.png",
     url: "#",
   },
 ];
