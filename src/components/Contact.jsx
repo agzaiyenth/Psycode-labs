@@ -7,7 +7,7 @@ import Calendar from "./Calender";
 
 const Contact = () => {
   return (
-    <Section id="contact">
+    <Section id="reach-us">
       <div className="container">
         <Heading
           title="Contact Us"

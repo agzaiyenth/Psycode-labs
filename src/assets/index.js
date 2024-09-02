@@ -45,14 +45,6 @@ import service2 from "./services/service-2.png";
 import service3 from "./services/service-3.png";
 
 
-import coins from "./roadmap/coins.png";
-import done from "./roadmap/done.svg";
-import hero from "./roadmap/hero.png";
-import roadmap1 from "./roadmap/image-1.png";
-import roadmap2 from "./roadmap/image-2.png";
-import roadmap3 from "./roadmap/image-3.png";
-import roadmap4 from "./roadmap/image-4.png";
-import undone from "./roadmap/undone.svg";
 import travels from "./travels.svg";
 
 import notification1 from "./notification/image-1.png";
@@ -87,14 +79,6 @@ import linkedin from "./socials/linkedin.svg";
 import hospital from "./HospitalityPathLogo .svg";
 
 export {
-  hosp,
-  cey,
-  sud,
-  cong,
-  irosh,
-  ezy,
-  ama,
-  sar,
   hospital,
   travels,
   linkedin,
@@ -142,16 +126,6 @@ export {
   service1,
   service2,
   service3,
-  lines,
-  stars,
-  coins,
-  done,
-  hero,
-  roadmap1,
-  roadmap2,
-  roadmap3,
-  roadmap4,
-  undone,
   notification1,
   notification2,
   notification3,
