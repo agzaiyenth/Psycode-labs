@@ -87,6 +87,9 @@ import twitter from "./socials/twitter.svg";
 import whatsapp from "./socials/whatsapp.svg";
 import linkedin from "./socials/linkedin.svg";
 import hospital from "./HospitalityPathLogo .svg";
+import hosp from "./portfolio/hospitality.svg";
+import cong from "./portfolio/congress.svg";
+import cey from "./portfolio/ceylon.svg"
 
 export {
   hospital,
