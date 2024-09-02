@@ -1,6 +1,7 @@
 
 import {  ClientLogos, projects } from "../constants";
 import Section from "./Section";
+import Heading from "./Heading";
 
 
 import Marquee from 'react-fast-marquee'; 
@@ -48,17 +49,16 @@ const Projects = () => {
                 data-jos_counter="1"
               >
                 <div className="mb-6">
-                  <h2 className="h2 font-clashDisplay text-4xl font-medium leading-[1.06] text-white sm:text-[44px] lg:text-[56px] xl:text-[75px]">
-                    Trusted by Clients
-                  </h2>
+                <Heading className="md:max-w-md lg:max-w-2xl" title="Trusted by Clients"/>
+            
                 </div>
-                <h3 className="mb-7 last:mb-0">
+                <p className="mb-7 last:mb-0 body-1  text-n-2 ">
                   At Psycode Labs, we don&apos;t just build platforms; we create
                   experiences that empower and uplift. Trusted by clients across
                   industries, our dedication to excellence is reflected in every
                   line of code, every feature we craft, and every satisfied
                   customer we serve.
-                </h3>
+                </p>
               </div>
               <div className="flex flex-col gap-6 overflow-hidden rounded-[30px] bg-gradient-to-t from-[rgba(255,255,255,.1)] to-[rgba(0,0,0,0.5)] py-[10px]">
                 <Marquee
