@@ -1,43 +1,69 @@
-import {
-  Gradient,
-} from "./design/Services";
+import { benefits } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
-import Testimonials from "./Testimonials";
+import Arrow from "../assets/svg/Arrow";
+import { GradientLight } from "./design/Benefits";
+import ClipPath from "../assets/svg/ClipPath";
 
 const Services = () => {
   return (
-    <Section id="feedback">
-      <div className="container">
+    <Section id="services">
+      <div className="container relative z-2">
         <Heading
-          title="Real Stories, Real Success"
-          text="Discover how we transforms visions into reality through the voices of our valued clients."
+          className="md:max-w-md lg:max-w-2xl"
+          title="Choose Smart. Build Fast. Psycode Lab's"
         />
 
-        <div className="relative">
-          <div className="relative z-1 flex flex-col items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
-          <iframe
-                className="w-full h-full object-cover md:object-right"
-                width={1500}
-                alt="Testimonial"
-                height={730}
-                src="https://www.youtube.com/embed/VqFfOGJuBQA?autoplay=1&fs=0&modestbranding=1">
+        <div className="flex flex-wrap gap-10 mb-10">
+          {benefits.map((item) => (
+            <div
+              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+              style={{
+                backgroundImage: `url(${item.backgroundUrl})`,
+              }}
+              key={item.id}
+            >
+              <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
+                <h5 className="h5 mb-5">{item.title}</h5>
+                <p className="body-2 mb-6 text-n-3">{item.text}</p>
+                <div className="flex items-center mt-auto">
+                  <img
+                    src={item.iconUrl}
+                    width={48}
+                    height={48}
+                    alt={item.title}
+                  />
+                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                    Explore more
+                  </p>
+                  <Arrow />
+                </div>
+              </div>
 
-                </iframe>
-                
-               
-        
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
-             
-            </div> </div>
+              {item.light && <GradientLight />}
 
-          
+              <div
+                className="absolute inset-0.5 bg-n-8"
+                style={{ clipPath: "url(#benefits)" }}
+              >
+                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+                  {item.imageUrl && (
+                    <img
+                      src={item.imageUrl}
+                      width={380}
+                      height={362}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+              </div>
 
-          <Gradient />
+              <ClipPath />
+            </div>
+          ))}
         </div>
-        
       </div>
-      <Testimonials/>
     </Section>
   );
 };
