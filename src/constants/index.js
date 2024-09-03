@@ -341,3 +341,54 @@ export const ClientLogos=[
     companyurl:"https://www.ceylontravelstours.lk/"
   },
 ]
+
+export const testimonials = [
+  {
+    name: 'Guy Hawkins',
+    role: 'Founder, Alpha Group',
+    image: '/api/placeholder/50/50',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+  },
+  {
+    name: 'Don Joe',
+    role: 'Founder, Alpha Group',
+    image: '/api/placeholder/50/50',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+  },
+  {
+    name: 'Zoe Mantis',
+    role: 'Founder, Alpha Group',
+    image: '/api/placeholder/50/50',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+  },
+  {
+    name: 'Zoe 1',
+    role: 'Founder, Alpha Group',
+    image: '/api/placeholder/50/50',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+  },
+  {
+    name: 'Zoe 2',
+    role: 'Founder, Alpha Group',
+    image: '/api/placeholder/50/50',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+  },
+  {
+    name: 'Zoe 3',
+    role: 'Founder, Alpha Group',
+    image: '/api/placeholder/50/50',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+  },
+  {
+    name: 'Zoe 34',
+    role: 'Founder, Alpha Group',
+    image: '/api/placeholder/50/50',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+  },
+  {
+    name: 'Zoe 5',
+    role: 'Founder, Alpha Group',
+    image: '/api/placeholder/50/50',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+  },
+];
