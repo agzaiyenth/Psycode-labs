@@ -19,7 +19,7 @@ explore opportunities together. Reach out today!"
 
 
           <div className=" mx-0 flex flex-col lg:flex-row  gap-0  lg:gap-24 md:py-0 lg:py-10">
-          <Calendar />
+          
             <div className="py-10 w-full  lg:w-[50%] flex flex-col gap- divide-y divide-gray-200 dark:divide-zinc-800">
 
               <div className="flex gap-x-7 py-6">
@@ -56,7 +56,7 @@ explore opportunities together. Reach out today!"
               </div>
 
             </div>
-            
+            <Calendar />
           </div>
 
 
