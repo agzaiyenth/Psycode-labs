@@ -40,12 +40,12 @@ const Hero = () => {
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
          
-          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+          <div className="absolute top-[54%]  w-[234%] lg:translate-x-2/5 translate-x-3/6 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
               src={heroBackground}
-              className="w-full"
-              width={1440}
-              height={1800}
+              className="w-4/5"
+              width={440}
+              height={800}
               alt="hero"
             />
           </div>
