@@ -5,11 +5,13 @@ import Section from "./Section";
 const Footer = () => {
   return (
     <Section crosses className="!px-0 !py-10">
-      <div className="container flex sm:justify-between justify-center items-center gap-10 max-sm:flex-col">
-        <p className="caption text-n-4 lg:block">
-          © {new Date().getFullYear()}. All rights reserved.
-        </p>
-
+      <div className="container px-5 py-2 mx-auto flex items-center sm:flex-row flex-col">
+     
+    <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 s sm:py-2 sm:mt-0 mt-4">© {new Date().getFullYear()} All Rights Reserved —
+      <a href="https://psycodelabs.lk" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Psycode Lab's</a>
+    </p>
+       
+        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
         <ul className="flex gap-5 flex-wrap">
           {socials.map((item) => (
             <a
@@ -22,6 +24,7 @@ const Footer = () => {
             </a>
           ))}
         </ul>
+        </span>
       </div>
     </Section>
   );
