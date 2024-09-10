@@ -3,7 +3,7 @@ import {  ClientLogos, projects } from "../constants";
 import Section from "./Section";
 import Heading from "./Heading";
 
-
+import { BottomLine } from "./design/Hero";
 import Marquee from 'react-fast-marquee'; 
 
 
@@ -27,6 +27,7 @@ const LogoCarousel = () => {
           </div>
         ))}
       </Marquee>
+      
     </div>
   );
 };
@@ -35,6 +36,7 @@ const LogoCarousel = () => {
 const Projects = () => {
   return (
     <Section>
+      
       <div className="container">
         <div className="pb-20 xl:pb-[130px]">
           <div className="global-container">
@@ -89,7 +91,10 @@ const Projects = () => {
         <LogoCarousel />
         <div className="absolute right-[10%] top-[10%] -z-[1] h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-gradient-to-t from-[#5636C7] to-[#5028DD] blur-[250px]"></div>
       </div>
+      
+      
     </Section>
+
   );
 };
 

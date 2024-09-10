@@ -3,11 +3,13 @@ import Heading from "./Heading";
 import {
   Gradient,
 } from "./design/Services";
+import { BottomLine } from "./design/Hero";
 import Calendar from "./Calender";
 
 const Contact = () => {
   return (
     <Section id="reach-us">
+      
       <div className="container">
         <Heading
           title="Contact Us"

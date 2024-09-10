@@ -8,6 +8,7 @@ import VideoDialog from "./video";
 
 const Stories = () => {
   return (
+    
     <Section id="feedback">
       <div className="container">
         <Heading
@@ -48,7 +49,9 @@ const Stories = () => {
         
       </div>
       <Testimonials/>
+     
     </Section>
+    
   );
 };
 

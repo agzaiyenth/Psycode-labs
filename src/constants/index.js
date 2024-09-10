@@ -344,16 +344,16 @@ export const ClientLogos=[
 
 export const testimonials = [
   {
-    name: 'Guy Hawkins',
-    role: 'Founder, Alpha Group',
+    name: 'Hafsa Rizvi',
+    role: 'Digital Media Associate \n@The Creative Congress',
     image: '/api/placeholder/50/50',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+    content: "I highly recommend Psycode Labs, initiated by Agzaiyenth. Their fast delivery, excellent understanding of client needs, and valuable suggestions for business improvement make them an ideal choice. Moreover, they maintain clear and transparent communication, ensuring all interactions are well-documented. If you're seeking a reliable team to develop your WordPress or custom website, Psycode Labs is an excellent option. Their ability to adapt to various situations, combined with strong emotional intelligence, allows them to empathize with client needs. This level of support is exceptional and rarely found in the development industry."
   },
   {
-    name: 'Don Joe',
-    role: 'Founder, Alpha Group',
+    name: 'Jinendri Mathews',
+    role: 'Associate Project Manager @Fusion',
     image: '/api/placeholder/50/50',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+    content: 'I’m truly impressed by the exceptional service from Psycode Labs. Their team was incredibly fast and flexible throughout the entire project. Not only did they deliver the website ahead of schedule, but they also added extra functionalities I didn’t even expect, all at the most competitive price. Highly recommend their service!'
   },
   {
     name: 'Zoe Mantis',

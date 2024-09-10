@@ -3,10 +3,12 @@ import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
+import { BottomLine } from "./design/Hero";
 
 const About = () => {
   return (
     <Section crosses>
+      <BottomLine />
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
