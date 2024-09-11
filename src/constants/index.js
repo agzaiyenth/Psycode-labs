@@ -92,7 +92,11 @@ export const companyurllogos=[
     imagelink:hospital,
     companyurl:"https://hospitalitypathriyadh.com/"
   },
-  
+  {
+    id:"6",
+    imagelink:travels,
+    companyurl:"https://www.ceylontravelstours.lk/"
+  },
 ]
 
 
