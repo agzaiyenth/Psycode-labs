@@ -346,49 +346,41 @@ export const testimonials = [
   {
     name: 'Hafsa Rizvi',
     role: 'Digital Media Associate \n@The Creative Congress',
-    image: '/api/placeholder/50/50',
     content: "I highly recommend Psycode Labs, initiated by Agzaiyenth. Their fast delivery, excellent understanding of client needs, and valuable suggestions for business improvement make them an ideal choice. Moreover, they maintain clear and transparent communication, ensuring all interactions are well-documented. If you're seeking a reliable team to develop your WordPress or custom website, Psycode Labs is an excellent option. Their ability to adapt to various situations, combined with strong emotional intelligence, allows them to empathize with client needs. This level of support is exceptional and rarely found in the development industry."
   },
   {
-    name: 'Jinendri Mathews',
+    name: 'Jinendri Mathew',
     role: 'Associate Project Manager @Fusion',
-    image: '/api/placeholder/50/50',
     content: 'I’m truly impressed by the exceptional service from Psycode Labs. Their team was incredibly fast and flexible throughout the entire project. Not only did they deliver the website ahead of schedule, but they also added extra functionalities I didn’t even expect, all at the most competitive price. Highly recommend their service!'
   },
   {
     name: 'Zoe Mantis',
     role: 'Founder, Alpha Group',
-    image: '/api/placeholder/50/50',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
   },
   {
     name: 'Zoe 1',
     role: 'Founder, Alpha Group',
-    image: '/api/placeholder/50/50',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
   },
   {
     name: 'Zoe 2',
     role: 'Founder, Alpha Group',
-    image: '/api/placeholder/50/50',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
   },
   {
     name: 'Zoe 3',
     role: 'Founder, Alpha Group',
-    image: '/api/placeholder/50/50',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
   },
   {
     name: 'Zoe 34',
     role: 'Founder, Alpha Group',
-    image: '/api/placeholder/50/50',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
   },
   {
     name: 'Zoe 5',
     role: 'Founder, Alpha Group',
-    image: '/api/placeholder/50/50',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
   },
 ];

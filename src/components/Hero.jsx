@@ -10,10 +10,10 @@ const Hero = () => {
 
   return (
     <Section
-      className="pt-[10rem] "
-      crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
-      customPaddings
+    className="pt-[12rem] -mt-[5.25rem]"
+    crosses
+    crossesOffset="lg:translate-y-[5.25rem]"
+    customPaddings
       id="home"
       
     >
@@ -32,7 +32,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 mt-[3rem]">
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 pt-[3rem]">
           From websites to digital marketing, hosting to video, we delivers it all.
           </p>
           <Button href="#reach-us">
@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
          
-          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+          <div className="absolute -top-[94%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
               src={heroBackground}
               className="w-full"

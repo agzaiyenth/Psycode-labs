@@ -2,10 +2,9 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { testimonials } from '../constants';
 
-const TestimonialCard = ({ name, role, image, content }) => (
+const TestimonialCard = ({ name, role, content }) => (
   <div className="bg-opacity-40 backdrop-blur-md  rounded-lg p-6 shadow-lg min-w-[280px] lg:min-w-[480px] max-w-[280px] lg:max-w-[480px] mx-2 bg-gray-800">
     <div className="flex items-center mb-4">
-      <img src={image} alt={name} className="w-12 h-12 rounded-full mr-4" />
       <div>
         <h3 className="text-white font-semibold text-lg">{name}</h3>
         <p className="text-gray-300 text-sm">{role}</p>
