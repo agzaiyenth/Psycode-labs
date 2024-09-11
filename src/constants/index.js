@@ -92,6 +92,7 @@ export const companyurllogos=[
     imagelink:hospital,
     companyurl:"https://hospitalitypathriyadh.com/"
   },
+  
 ]
 
 
@@ -266,21 +267,18 @@ export const projects = [
   {
     id: "1",
     title: "Amazing Tribe",
-    
     imageUrl: "projects/2.png",
     url: "https://amazingtribe.lk/",
   },
   {
     id: "2",
     title: "Ezy Laundry",
-    
     imageUrl: "projects/3.png",
-    url: "#",
+    url: "https://www.ezylaundry.au/",
   },
   {
     id: "3",
     title: "Fusion Store - Wedi",
-    
     imageUrl: "projects/4.png",
     url: "https://wedi.org.lk/",
   },
@@ -294,13 +292,25 @@ export const projects = [
     id: "5",
     title: "Hospitality Path Riyadh",
     imageUrl: "projects/6.png",
-    url: "#",
+    url: "https://hospitalitypathriyadh.com/",
   },
   {
     id: "6",
     title: "Ceylon Travels & Tours",
     imageUrl: "projects/7.png",
-    url: "#",
+    url: "https://www.ceylontravelstours.lk/",
+  },
+  {
+    id:"7",
+    title: "Shurooq Al Afiya",
+    imageUrl:"projects/9.png",
+    companyurl:"https://shurooqalafiya.com/"
+  },
+  {
+    id:"8",
+    title: "Shurooq Al Afiya",
+    imageUrl:"projects/8.png",
+    companyurl:"https://shurooqalafiya.com/"
   },
 ];
 
@@ -318,7 +328,7 @@ export const ClientLogos=[
   {
     id:"2",
     imagelink:yourlogo,
-    companyurl:"https://sharouqalafia.com/"
+    companyurl:"https://shurooqalafiya.com/"
   },
   {
     id:"3",
@@ -354,9 +364,9 @@ export const testimonials = [
     content: 'I’m truly impressed by the exceptional service from Psycode Labs. Their team was incredibly fast and flexible throughout the entire project. Not only did they deliver the website ahead of schedule, but they also added extra functionalities I didn’t even expect, all at the most competitive price. Highly recommend their service!'
   },
   {
-    name: 'Zoe Mantis',
-    role: 'Founder, Alpha Group',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+    name: 'Shane Silva',
+    role: 'CEO, Ceylon travels and tours ',
+    content: 'We recently had the pleasure of working with Psycode Labs for the development of our website, and they truly exceeded our expectations. Not only did they deliver the project faster than we expected , but the quality and creativity of the final outcome were beyond what we imagined. Their team is highly skilled, professional, and responsive, ensuring smooth communication throughout the entire process. We are extremely satisfied with their work and would highly recommend Psycode Labs to anyone in need of innovative and timely web development services.'
   },
   {
     name: 'Zoe 1',
