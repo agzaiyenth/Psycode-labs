@@ -30,7 +30,7 @@ const Stories = () => {
       <VideoDialog
         className="hidden dark:block w-full h-full object-cover md:object-right"
         animationStyle="top-in-bottom-out"
-        videoSrc="https://youtu.be/ycUwjqcRj-A"
+        videoSrc="https://www.youtube.com/embed/ycUwjqcRj-A?autoplay=1&fs=0&modestbranding=1"
         thumbnailSrc="https://placehold.co/1920x1080"
         thumbnailAlt="Video"
       />
