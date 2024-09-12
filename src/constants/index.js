@@ -359,12 +359,12 @@ export const ClientLogos=[
 export const testimonials = [
   {
     name: 'Hafsa Rizvi',
-    role: 'Digital Media Associate \n@The Creative Congress',
+    role: 'Digital Media Associate, The Creative Congress',
     content: "I highly recommend Psycode Labs, initiated by Agzaiyenth. Their fast delivery, excellent understanding of client needs, and valuable suggestions for business improvement make them an ideal choice. Moreover, they maintain clear and transparent communication, ensuring all interactions are well-documented. If you're seeking a reliable team to develop your WordPress or custom website, Psycode Labs is an excellent option. Their ability to adapt to various situations, combined with strong emotional intelligence, allows them to empathize with client needs. This level of support is exceptional and rarely found in the development industry."
   },
   {
     name: 'Jinendri Mathew',
-    role: 'Associate Project Manager @Fusion',
+    role: 'Associate Project Manager ,Sarvodhaya Fusion',
     content: 'I’m truly impressed by the exceptional service from Psycode Labs. Their team was incredibly fast and flexible throughout the entire project. Not only did they deliver the website ahead of schedule, but they also added extra functionalities I didn’t even expect, all at the most competitive price. Highly recommend their service!'
   },
   {
@@ -373,28 +373,8 @@ export const testimonials = [
     content: 'We recently had the pleasure of working with Psycode Labs for the development of our website, and they truly exceeded our expectations. Not only did they deliver the project faster than we expected , but the quality and creativity of the final outcome were beyond what we imagined. Their team is highly skilled, professional, and responsive, ensuring smooth communication throughout the entire process. We are extremely satisfied with their work and would highly recommend Psycode Labs to anyone in need of innovative and timely web development services.'
   },
   {
-    name: 'Zoe 1',
-    role: 'Founder, Alpha Group',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
-  },
-  {
     name: 'N. JEEVENDRAN ',
     role: 'MANAGING DIRECTOR, Shurooq Al Afiya',
-    content: "I'm delighted ever since I got introduced to  Agzaiyenth for my Company logo, domain, & Website creation. He absolutely delights you with his services and prompt too."
-  },
-  {
-    name: 'Zoe 3',
-    role: 'Founder, Alpha Group',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
-  },
-  {
-    name: 'Zoe 34',
-    role: 'Founder, Alpha Group',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
-  },
-  {
-    name: 'Zoe 5',
-    role: 'Founder, Alpha Group',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+    content: "I'm delighted ever since I got introduced to  Agzaiyenth for my Company logo, domain Configuration, & Website creation. He absolutely delights you with his services and prompt too."
   },
 ];
