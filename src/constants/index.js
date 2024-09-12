@@ -378,9 +378,9 @@ export const testimonials = [
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
   },
   {
-    name: 'Zoe 2',
-    role: 'Founder, Alpha Group',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et tincidunt leo. Mauris eleifend mi leo, lacinia porta sem iaculis eu.'
+    name: 'N. JEEVENDRAN ',
+    role: 'MANAGING DIRECTOR, Shurooq Al Afiya',
+    content: "I'm delighted ever since I got introduced to  Agzaiyenth for my Company logo, domain, & Website creation. He absolutely delights you with his services and prompt too."
   },
   {
     name: 'Zoe 3',
