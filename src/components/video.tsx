@@ -101,7 +101,7 @@ export default function VideoDialog({
                 className="size-8 text-white fill-white group-hover:scale-105 scale-100 transition-transform duration-200 ease-out"
                 style={{
                   filter:
-                    "drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06))",
+                    "drop-shadow(0 4px 3px rgb(68, 193, 222 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06))",
                 }}
               />
             </div>

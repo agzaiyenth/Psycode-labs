@@ -31,7 +31,7 @@ const Stories = () => {
         className="hidden dark:block w-full h-full object-cover md:object-right"
         animationStyle="top-in-bottom-out"
         videoSrc="https://www.youtube.com/embed/ycUwjqcRj-A?autoplay=1&fs=0&modestbranding=1"
-        thumbnailSrc="https://placehold.co/1920x1080"
+        thumbnailSrc="https://i.ibb.co/tLVzskT/Black-and-Red-Grunge-Sports-Boxing-Youtube-Thumbnail.png"
         thumbnailAlt="Video"
       />
     
