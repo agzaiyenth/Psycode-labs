@@ -77,8 +77,14 @@ import twitter from "./socials/twitter.svg";
 import whatsapp from "./socials/whatsapp.svg";
 import linkedin from "./socials/linkedin.svg";
 import hospital from "./HospitalityPathLogo .svg";
+import ashan from "./ashantech.svg";
+import island from "./islandmarket.svg";
+import kenasto from "./kenasto.svg";
 
 export {
+  ashan,
+  island,
+  kenasto,
   hospital,
   travels,
   linkedin,

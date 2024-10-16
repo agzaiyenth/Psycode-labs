@@ -1,4 +1,7 @@
 import {
+  ashan,
+  island,
+  kenasto,
   aftereffects,
   amaizing,
   benefitIcon1,
@@ -96,6 +99,21 @@ export const companyurllogos=[
     id:"6",
     imagelink:travels,
     companyurl:"https://www.ceylontravelstours.lk/"
+  },
+  {
+    id:"7",
+    imagelink:ashan,
+    companyurl:"https://www.ashantechnologist.lk/"
+  },
+  {
+    id:"8",
+    imagelink:island,
+    companyurl:"https://www.theislandmarketlk.com/"
+  },
+  {
+    id:"9",
+    imagelink:kenasto,
+    companyurl:"https://www.kenasto.com/"
   },
 ]
 
@@ -316,6 +334,24 @@ export const projects = [
     imageUrl:"projects/8.png",
     companyurl:"https://shurooqalafiya.com/"
   },
+  {
+    id:"9",
+    title: "Ashan Technologist",
+    imageUrl:"projects/8.png",
+    companyurl:"https://www.ashantechnologist.lk/"
+  },
+  {
+    id:"10",
+    title: "The Island Market",
+    imageUrl:"projects/8.png",
+    companyurl:"https://www.theislandmarketlk.com/"
+  },
+  {
+    id:"10",
+    title: "Kenasto",
+    imageUrl:"projects/8.png",
+    companyurl:"https://www.kenasto.com/"
+  },
 ];
 
 export const ClientLogos=[
@@ -353,6 +389,21 @@ export const ClientLogos=[
     id:"6",
     imagelink:travels,
     companyurl:"https://www.ceylontravelstours.lk/"
+  },
+  {
+    id:"7",
+    imagelink:ashan,
+    companyurl:"https://www.ashantechnologist.lk/"
+  },
+  {
+    id:"8",
+    imagelink:island,
+    companyurl:"https://www.theislandmarketlk.com/"
+  },
+  {
+    id:"8",
+    imagelink:kenasto,
+    companyurl:"https://www.kenasto.com/"
   },
 ]
 
