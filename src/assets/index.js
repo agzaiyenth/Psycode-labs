@@ -24,7 +24,9 @@ import chromecast from "./chrome-cast.svg";
 import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import lexi from "./lexi.svg";
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
 import heroBackground from "./hero/hero-background.jpg";
@@ -43,7 +45,6 @@ import photoshop from "./collaboration/photoshop.png";
 import service1 from "./services/service-1.png";
 import service2 from "./services/service-2.png";
 import service3 from "./services/service-3.png";
-
 
 import travels from "./travels.svg";
 
@@ -82,6 +83,7 @@ import island from "./islandmarket.svg";
 import kenasto from "./kenasto.svg";
 
 export {
+  lexi,
   ashan,
   island,
   kenasto,

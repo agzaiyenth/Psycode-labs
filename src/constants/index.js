@@ -4,6 +4,7 @@ import {
   kenasto,
   aftereffects,
   amaizing,
+  lexi,
   benefitIcon1,
   benefitIcon2,
   benefitIcon3,
@@ -114,6 +115,11 @@ export const companyurllogos=[
     id:"9",
     imagelink:kenasto,
     companyurl:"https://www.kenasto.com/"
+  },
+  {
+    id:"10",
+    imagelink:lexi,
+    companyurl:"https://www.lexi.lk/"
   },
 ]
 
@@ -268,7 +274,7 @@ export const socials = [
     id: "2",
     title: "What's App",
     iconUrl: whatsapp,
-    url: "https://wa.link/nfxr0z",
+    url: "https://wa.psycodelabs.lk",
   },
   {
     id: "3",
@@ -337,7 +343,7 @@ export const projects = [
   {
     id:"9",
     title: "Ashan Technologist",
-    imageUrl:"projects/8.png",
+    imageUrl:"projects/11.png",
     companyurl:"https://www.ashantechnologist.lk/"
   },
   {
@@ -345,6 +351,24 @@ export const projects = [
     title: "The Island Market",
     imageUrl:"projects/8.png",
     companyurl:"https://www.theislandmarketlk.com/"
+  },
+  {
+    id:"10",
+    title: "Kenasto",
+    imageUrl:"projects/8.png",
+    companyurl:"https://www.kenasto.com/"
+  },
+  {
+    id:"11",
+    title: "The Kings Bay Hotel",
+    imageUrl:"projects/10.png",
+    companyurl:"https://www.thekingsbayhotel.com/"
+  },
+  {
+    id:"12",
+    title: "Lexi",
+    imageUrl:"projects/8.png",
+    companyurl:"https://www.lexi.lk/"
   },
   {
     id:"10",
@@ -401,7 +425,22 @@ export const ClientLogos=[
     companyurl:"https://www.theislandmarketlk.com/"
   },
   {
-    id:"8",
+    id:"9",
+    imagelink:kenasto,
+    companyurl:"https://www.kenasto.com/"
+  },
+  {
+    id:"10",
+    imagelink:lexi,
+    companyurl:"https://www.lexi.lk/"
+  },
+  {
+    id:"9",
+    imagelink:kenasto,
+    companyurl:"https://www.kenasto.com/"
+  },
+  {
+    id:"9",
     imagelink:kenasto,
     companyurl:"https://www.kenasto.com/"
   },
