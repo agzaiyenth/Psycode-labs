@@ -40,23 +40,29 @@ export const navigation = [
   {
     id: "0",
     title: "home",
-    url: "#home",
+    url: "/#home",
   },
   {
     id: "1",
     title: "Service",
-    url: "#services",
+    url: "/#services",
   },
   {
     id: "2",
     title: "Customer Voices",
-    url: "#feedback",
+    url: "/#feedback",
   },
   {
     id: "3",
     title: "Contact",
-    url: "#reach-us",
-  }
+    url: "/#reach-us",
+  },
+  {
+    id: "4",
+    title: "Careers",
+    url: "/careers",
+  },
+  
 ];
 
 
