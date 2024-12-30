@@ -23,6 +23,7 @@ import disc02 from "./disc-02.svg";
 import chromecast from "./chrome-cast.svg";
 import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
+import a2v from "./a2v.svg";
 import background from "./background.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -83,6 +84,7 @@ import island from "./islandmarket.svg";
 import kenasto from "./kenasto.svg";
 
 export {
+  a2v,
   lexi,
   ashan,
   island,

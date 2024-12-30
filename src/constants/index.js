@@ -1,4 +1,5 @@
 import {
+  a2v,
   ashan,
   island,
   kenasto,
@@ -57,13 +58,7 @@ export const navigation = [
     id: "3",
     title: "Contact",
     url: "/#reach-us",
-  },
-  {
-    id: "4",
-    title: "Careers",
-    url: "/careers",
-  },
-  
+  },  
 ];
 
 
@@ -126,6 +121,11 @@ export const companyurllogos=[
     id:"10",
     imagelink:lexi,
     companyurl:"https://www.lexi.lk/"
+  },
+  {
+    id:"11",
+    imagelink:a2v,
+    companyurl:"https://www.a2vflexosolution.com/"
   },
 ]
 
@@ -325,13 +325,13 @@ export const projects = [
   {
     id: "5",
     title: "Hospitality Path Riyadh",
-    imageUrl: "projects/6.png",
+    imageUrl: "projects/7.png",
     url: "https://hospitalitypathriyadh.com/",
   },
   {
     id: "6",
     title: "Ceylon Travels & Tours",
-    imageUrl: "projects/7.png",
+    imageUrl: "projects/14.png",
     url: "https://www.ceylontravelstours.lk/",
   },
   {
@@ -342,8 +342,8 @@ export const projects = [
   },
   {
     id:"8",
-    title: "Shurooq Al Afiya",
-    imageUrl:"projects/8.png",
+    title: "Iroshan Kurera",
+    imageUrl:"projects/6.png",
     companyurl:"https://shurooqalafiya.com/"
   },
   {
@@ -355,33 +355,28 @@ export const projects = [
   {
     id:"10",
     title: "The Island Market",
-    imageUrl:"projects/8.png",
+    imageUrl:"projects/13.png",
     companyurl:"https://www.theislandmarketlk.com/"
   },
   {
-    id:"10",
+    id:"11",
     title: "Kenasto",
-    imageUrl:"projects/8.png",
+    imageUrl:"projects/15.png",
     companyurl:"https://www.kenasto.com/"
   },
   {
-    id:"11",
+    id:"12",
     title: "The Kings Bay Hotel",
     imageUrl:"projects/10.png",
     companyurl:"https://www.thekingsbayhotel.com/"
   },
   {
-    id:"12",
+    id:"13",
     title: "Lexi",
-    imageUrl:"projects/8.png",
+    imageUrl:"projects/12.png",
     companyurl:"https://www.lexi.lk/"
   },
-  {
-    id:"10",
-    title: "Kenasto",
-    imageUrl:"projects/8.png",
-    companyurl:"https://www.kenasto.com/"
-  },
+  
 ];
 
 export const ClientLogos=[
@@ -441,15 +436,11 @@ export const ClientLogos=[
     companyurl:"https://www.lexi.lk/"
   },
   {
-    id:"9",
-    imagelink:kenasto,
-    companyurl:"https://www.kenasto.com/"
+    id:"11",
+    imagelink:a2v,
+    companyurl:"https://www.a2vflexosolution.com/"
   },
-  {
-    id:"9",
-    imagelink:kenasto,
-    companyurl:"https://www.kenasto.com/"
-  },
+  
 ]
 
 export const testimonials = [
@@ -472,5 +463,20 @@ export const testimonials = [
     name: 'N. JEEVENDRAN ',
     role: 'MANAGING DIRECTOR, Shurooq Al Afiya',
     content: "I'm delighted ever since I got introduced to  Agzaiyenth for my Company logo, domain Configuration, & Website creation. He absolutely delights you with his services and prompt too."
+  },
+  {
+    name: 'Benet Samantha ',
+    role: 'CEO, Ashan Technologist',
+    content: "Agzaiyenth and his team were transparent, efficient, and professional throughout the process. The website they developed for us perfectly showcased our services with a modern and functional design. Their support and dedication to quality were outstanding. Highly recommended!"
+  },
+  {
+    name: 'Nisreen Disanayake ',
+    role: 'CEO/Founder, The Island Market',
+    content: "I was fortunate to win Psycode Lab's giveaway, and they delivered a beautifully designed, fully functional website completely free of charge! Despite this, Agzaiyenth treated it like a premium project, with unmatched attention to detail and professionalism. Their commitment to helping businesses grow online is truly commendable. Thank you, Agzai, for helping The Island Market shine!"
+  },
+  {
+    name: 'Hafzal ',
+    role: 'Partner, Kenasto',
+    content: "We initially approached Psycode Lab's for hosting after a bad experience with another agency's non-responsive site. Agzaiyenth went above and beyond, redesigning our entire website for free. The result was a stunning, fully responsive site that exceeded our expectations. Truly exceptional service!"
   },
 ];
