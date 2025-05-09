@@ -87,6 +87,7 @@ import island from "./islandmarket.svg";
 import kenasto from "./kenasto.svg";
 
 export {
+  sdgp
   msp,
   sar,
   ccc,

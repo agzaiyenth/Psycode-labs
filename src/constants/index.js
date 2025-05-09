@@ -1,5 +1,9 @@
 import {
+  sar,
+  ccc,
+  msp,
   a2v,
+  sdgp,
   ashan,
   island,
   kenasto,
@@ -127,6 +131,26 @@ export const companyurllogos=[
     imagelink:a2v,
     companyurl:"https://www.a2vflexosolution.com/"
   },
+  {
+    id:"12",
+    imagelink:sar,
+    companyurl:"https://sarvodaya.store/"
+    },
+    {
+      id:"13",
+      imagelink:ccc,
+      companyurl:"https://coffee.lk"
+      },
+      {
+        id:"14",
+        imagelink:msp,
+        companyurl:"https://mspnetwork.lk/"
+        },
+        {
+          id:"15",
+          imagelink:sdgp,
+          companyurl:"https://sdgp.lk/"
+          },
 ]
 
 
