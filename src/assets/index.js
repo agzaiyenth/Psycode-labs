@@ -85,9 +85,10 @@ import hospital from "./HospitalityPathLogo .svg";
 import ashan from "./ashantech.svg";
 import island from "./islandmarket.svg";
 import kenasto from "./kenasto.svg";
+import sdgp from "./sdgp.svg";
 
 export {
-  sdgp
+  sdgp,
   msp,
   sar,
   ccc,
