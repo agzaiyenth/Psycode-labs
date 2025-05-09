@@ -11,6 +11,9 @@ import check2 from "./check-02.svg";
 import loading1 from "./loading-01.svg";
 import yourlogo from "./yourlogo.svg";
 import fusion from "./fusion.svg";
+import ccc from "./ccc.svg";
+import sar from "./sar.svg";
+import msp from "./msp.svg";
 import congress from "./congress.svg";
 import amaizing from "./amaizingtribe.svg"
 import homeSmile from "./home-smile.svg";
@@ -84,6 +87,9 @@ import island from "./islandmarket.svg";
 import kenasto from "./kenasto.svg";
 
 export {
+  msp,
+  sar,
+  ccc,
   a2v,
   lexi,
   ashan,
