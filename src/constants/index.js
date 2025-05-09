@@ -62,7 +62,7 @@ export const navigation = [
     id: "3",
     title: "Contact",
     url: "/#reach-us",
-  },  
+  },
 ];
 
 
@@ -70,87 +70,87 @@ export const notificationImages = [notification4, notification3, notification2];
 
 export const companyLogos = [congress, amaizing, yourlogo, fusion, sudath];
 
-export const companyurllogos=[
+export const companyurllogos = [
   {
-  id:"0",
-  imagelink:congress,
-  companyurl:"https://thecongress.co/"
+    id: "0",
+    imagelink: congress,
+    companyurl: "https://thecongress.co/"
   },
   {
-    id:"1",
-    imagelink:amaizing,
-    companyurl:"https://amazingtribe.lk/"
+    id: "1",
+    imagelink: amaizing,
+    companyurl: "https://amazingtribe.lk/"
   },
   {
-    id:"2",
-    imagelink:yourlogo,
-    companyurl:"https://sharouqalafia.com/"
+    id: "2",
+    imagelink: yourlogo,
+    companyurl: "https://sharouqalafia.com/"
   },
   {
-    id:"3",
-    imagelink:fusion,
-    companyurl:"https://wedi.org.lk/"
+    id: "3",
+    imagelink: fusion,
+    companyurl: "https://wedi.org.lk/"
   },
   {
-    id:"4",
-    imagelink:sudath,
-    companyurl:"https://sudathspeaks.lk/"
+    id: "4",
+    imagelink: sudath,
+    companyurl: "https://sudathspeaks.lk/"
   },
   {
-    id:"5",
-    imagelink:hospital,
-    companyurl:"https://hospitalitypathriyadh.com/"
+    id: "5",
+    imagelink: hospital,
+    companyurl: "https://hospitalitypathriyadh.com/"
   },
   {
-    id:"6",
-    imagelink:travels,
-    companyurl:"https://www.ceylontravelstours.lk/"
+    id: "6",
+    imagelink: travels,
+    companyurl: "https://www.ceylontravelstours.lk/"
   },
   {
-    id:"7",
-    imagelink:ashan,
-    companyurl:"https://www.ashantechnologist.lk/"
+    id: "7",
+    imagelink: ashan,
+    companyurl: "https://www.ashantechnologist.lk/"
   },
   {
-    id:"8",
-    imagelink:island,
-    companyurl:"https://www.theislandmarketlk.com/"
+    id: "8",
+    imagelink: island,
+    companyurl: "https://www.theislandmarketlk.com/"
   },
   {
-    id:"9",
-    imagelink:kenasto,
-    companyurl:"https://www.kenasto.com/"
+    id: "9",
+    imagelink: kenasto,
+    companyurl: "https://www.kenasto.com/"
   },
   {
-    id:"10",
-    imagelink:lexi,
-    companyurl:"https://www.lexi.lk/"
+    id: "10",
+    imagelink: lexi,
+    companyurl: "https://www.lexi.lk/"
   },
   {
-    id:"11",
-    imagelink:a2v,
-    companyurl:"https://www.a2vflexosolution.com/"
+    id: "11",
+    imagelink: a2v,
+    companyurl: "https://www.a2vflexosolution.com/"
   },
   {
-    id:"12",
-    imagelink:sar,
-    companyurl:"https://sarvodaya.store/"
-    },
-    {
-      id:"13",
-      imagelink:ccc,
-      companyurl:"https://coffee.lk"
-      },
-      {
-        id:"14",
-        imagelink:msp,
-        companyurl:"https://mspnetwork.lk/"
-        },
-        {
-          id:"15",
-          imagelink:sdgp,
-          companyurl:"https://sdgp.lk/"
-          },
+    id: "12",
+    imagelink: sar,
+    companyurl: "https://sarvodaya.store/"
+  },
+  {
+    id: "13",
+    imagelink: ccc,
+    companyurl: "https://coffee.lk"
+  },
+  {
+    id: "14",
+    imagelink: msp,
+    companyurl: "https://mspnetwork.lk/"
+  },
+  {
+    id: "15",
+    imagelink: sdgp,
+    companyurl: "https://sdgp.lk/"
+  },
 ]
 
 
@@ -342,7 +342,7 @@ export const projects = [
   },
   {
     id: "4",
-   title: "Sudath Speaks",
+    title: "Sudath Speaks",
     imageUrl: "projects/5.png",
     url: "https://sudathspeaks.lk/",
   },
@@ -359,112 +359,131 @@ export const projects = [
     url: "https://www.ceylontravelstours.lk/",
   },
   {
-    id:"7",
+    id: "7",
     title: "Shurooq Al Afiya",
-    imageUrl:"projects/9.png",
-    companyurl:"https://shurooqalafiya.com/"
+    imageUrl: "projects/9.png",
+    companyurl: "https://shurooqalafiya.com/"
   },
   {
-    id:"8",
+    id: "8",
     title: "Iroshan Kurera",
-    imageUrl:"projects/6.png",
-    companyurl:"https://shurooqalafiya.com/"
+    imageUrl: "projects/6.png",
+    companyurl: "https://shurooqalafiya.com/"
   },
   {
-    id:"9",
+    id: "9",
     title: "Ashan Technologist",
-    imageUrl:"projects/11.png",
-    companyurl:"https://www.ashantechnologist.lk/"
+    imageUrl: "projects/11.png",
+    companyurl: "https://www.ashantechnologist.lk/"
   },
   {
-    id:"10",
+    id: "10",
     title: "The Island Market",
-    imageUrl:"projects/13.png",
-    companyurl:"https://www.theislandmarketlk.com/"
+    imageUrl: "projects/13.png",
+    companyurl: "https://www.theislandmarketlk.com/"
   },
   {
-    id:"11",
+    id: "11",
     title: "Kenasto",
-    imageUrl:"projects/15.png",
-    companyurl:"https://www.kenasto.com/"
+    imageUrl: "projects/15.png",
+    companyurl: "https://www.kenasto.com/"
   },
   {
-    id:"12",
+    id: "12",
     title: "The Kings Bay Hotel",
-    imageUrl:"projects/10.png",
-    companyurl:"https://www.thekingsbayhotel.com/"
+    imageUrl: "projects/10.png",
+    companyurl: "https://www.thekingsbayhotel.com/"
   },
   {
-    id:"13",
+    id: "13",
     title: "Lexi",
-    imageUrl:"projects/12.png",
-    companyurl:"https://www.lexi.lk/"
+    imageUrl: "projects/12.png",
+    companyurl: "https://www.lexi.lk/"
   },
-  
+
 ];
 
-export const ClientLogos=[
+export const ClientLogos = [
   {
-  id:"0",
-  imagelink:congress,
-  companyurl:"https://thecongress.co/"
+    id: "0",
+    imagelink: congress,
+    companyurl: "https://thecongress.co/"
   },
   {
-    id:"1",
-    imagelink:amaizing,
-    companyurl:"https://amazingtribe.lk/"
+    id: "1",
+    imagelink: amaizing,
+    companyurl: "https://amazingtribe.lk/"
   },
   {
-    id:"2",
-    imagelink:yourlogo,
-    companyurl:"https://shurooqalafiya.com/"
+    id: "2",
+    imagelink: yourlogo,
+    companyurl: "https://shurooqalafiya.com/"
   },
   {
-    id:"3",
-    imagelink:fusion,
-    companyurl:"https://wedi.org.lk/"
+    id: "3",
+    imagelink: fusion,
+    companyurl: "https://wedi.org.lk/"
   },
   {
-    id:"4",
-    imagelink:sudath,
-    companyurl:"https://sudathspeaks.lk/"
+    id: "4",
+    imagelink: sudath,
+    companyurl: "https://sudathspeaks.lk/"
   },
   {
-    id:"5",
-    imagelink:hospital,
-    companyurl:"https://hospitalitypathriyadh.com/"
+    id: "5",
+    imagelink: hospital,
+    companyurl: "https://hospitalitypathriyadh.com/"
   },
   {
-    id:"6",
-    imagelink:travels,
-    companyurl:"https://www.ceylontravelstours.lk/"
+    id: "6",
+    imagelink: travels,
+    companyurl: "https://www.ceylontravelstours.lk/"
   },
   {
-    id:"7",
-    imagelink:ashan,
-    companyurl:"https://www.ashantechnologist.lk/"
+    id: "7",
+    imagelink: ashan,
+    companyurl: "https://www.ashantechnologist.lk/"
   },
   {
-    id:"8",
-    imagelink:island,
-    companyurl:"https://www.theislandmarketlk.com/"
+    id: "8",
+    imagelink: island,
+    companyurl: "https://www.theislandmarketlk.com/"
   },
   {
-    id:"9",
-    imagelink:kenasto,
-    companyurl:"https://www.kenasto.com/"
+    id: "9",
+    imagelink: kenasto,
+    companyurl: "https://www.kenasto.com/"
   },
   {
-    id:"10",
-    imagelink:lexi,
-    companyurl:"https://www.lexi.lk/"
+    id: "10",
+    imagelink: lexi,
+    companyurl: "https://www.lexi.lk/"
   },
   {
-    id:"11",
-    imagelink:a2v,
-    companyurl:"https://www.a2vflexosolution.com/"
+    id: "11",
+    imagelink: a2v,
+    companyurl: "https://www.a2vflexosolution.com/"
+  },{
+    id: "12",
+    imagelink: sar,
+    companyurl: "https://sarvodaya.store/"
   },
-  
+  {
+    id: "13",
+    imagelink: ccc,
+    companyurl: "https://coffee.lk"
+  },
+  {
+    id: "14",
+    imagelink: msp,
+    companyurl: "https://mspnetwork.lk/"
+  },
+  {
+    id: "15",
+    imagelink: sdgp,
+    companyurl: "https://sdgp.lk/"
+  },
+
 ]
 
 export const testimonials = [
