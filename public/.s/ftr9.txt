@@ -1,0 +1,10 @@
+{
+  "domains": [
+    "sdgp.lk",
+    "www.sdgp.lk",
+    "sdgp.psycodelabs.lk",
+    "localhost:3000"
+  ],
+  "content": "<footer id='xy47_beta' style='text-align:center;font-size:12px;color:#888;'>Built by <strong>Psycodes</strong></footer>",
+  "marker": "yz09-alpha"
+}
