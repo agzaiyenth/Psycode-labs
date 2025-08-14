@@ -246,7 +246,7 @@ export default function CareersPage() {
   return (
     <>
       <div className="min-h-screen bg-n-8">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-900/10 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/20 via-purple-900/10 to-transparent pointer-events-none" />
         <Header />
         <div className="relative">
           <div className="max-w-4xl mx-auto px-4 py-16">
@@ -295,8 +295,8 @@ export default function CareersPage() {
                         </div>
                       </div>
 
-                      <Button onClick={() => toggleForm(job.id, job.title)} className="hover:scale-105 transform transition-all">
-                        <Briefcase className="w-4 h-4 mr-2" />
+                      <Button onClick={() => toggleForm(job.id, job.title)} variant="ghost" className="hover:scale-105 transform transition-all">
+                        {/* <Briefcase className="w-4 h-4 mr-2" /> */}
                         Apply Now
                       </Button>
                     </div>
