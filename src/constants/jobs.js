@@ -22,7 +22,7 @@ export const jobs = [
       "Experience with cloud platforms (AWS, Vercel, Netlify)",
     ],
     icon: Code,
-    color: "bg-blue-500",
+    color: "text-blue-500",
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const jobs = [
       "Experience with WordPress REST API and headless WordPress",
     ],
     icon: Wordpress,
-    color: "bg-indigo-500",
+    color: "text-indigo-500",
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ export const jobs = [
       "Experience with motion design and micro-interactions",
     ],
     icon: Palette,
-    color: "bg-purple-500",
+    color: "text-purple-500",
   },
   {
     id: 4,
@@ -92,7 +92,7 @@ export const jobs = [
       "Experience with real-time applications (WebSockets, etc.)",
     ],
     icon: Database,
-    color: "bg-green-500",
+    color: "text-green-500",
   },
   {
     id: 5,
@@ -115,6 +115,6 @@ export const jobs = [
       "Experience with email marketing platforms",
     ],
     icon: Globe,
-    color: "bg-orange-500",
+    color: "text-orange-500",
   },
 ]

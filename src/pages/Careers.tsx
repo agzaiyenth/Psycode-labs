@@ -276,7 +276,7 @@ export default function CareersPage() {
                       </Button>
                     </div> */}
                   
-
+{/* {`p-3 rounded-lg ${job.color} text-white shadow-lg`} */}
             </div>
 
             {jobs.map((job) => {
@@ -286,8 +286,8 @@ export default function CareersPage() {
                   <div className="p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
-                        <div className={`p-3 rounded-lg ${job.color} text-white shadow-lg`}>
-                          <IconComponent className="w-6 h-6" />
+                        <div className="p-3 rounded-lg bg-[#1a1825] border border-[#2a2438] shadow-lg">
+                          <IconComponent className={`w-6 h-6 ${job.color}`} />
                         </div>
                         <div>
                           <h2 className="text-xl font-semibold text-white">{job.title}</h2>
