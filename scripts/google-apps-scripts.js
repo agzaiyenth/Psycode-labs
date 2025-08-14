@@ -46,12 +46,15 @@ function doPost(e) {
 
     if (sheet.getLastRow() === 0) {
       // Create headers once (row 1)
-      sheet.getRange(1, 1, 1, 7).setValues([[
+      sheet.getRange(1, 1, 1, 10).setValues([[
         "Timestamp",
         "Name",
         "Email",
         "Phone",
         "Position",
+        "linkedInURL",
+        "GitHub URL",
+        "personIntroduction",
         "CV File Name",
         "CV Drive URL"
       ]]);
@@ -63,6 +66,9 @@ function doPost(e) {
       data.email || "",
       data.phone || "",
       data.position || "",
+      data.linkedInURL || "",
+      data.gitHubURL || "",
+      data.personIntroduction || "",
       fileName,
       fileUrl
     ]);

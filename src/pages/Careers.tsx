@@ -5,14 +5,16 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { jobs } from "../constants/jobs";
-import { Upload, MapPin, Clock, Users, CheckCircle, Briefcase } from "lucide-react";
+import { Upload, MapPin, Clock, Users, CheckCircle } from "lucide-react";
 
 interface ApplicationForm {
   name: string;
   email: string;
   phone: string;
   position: string;
-  coverLetter: string;
+  linkedInURL: string; 
+  gitHubURL: string; 
+  personIntroduction: string;
   cv: File | null;
 }
 
@@ -101,6 +103,30 @@ const Card = ({ children, className = "" }: { children: React.ReactNode; classNa
   </div>
 );
 
+//validation handeler functions 
+
+const isVaildFullName=(name: string) => {
+  const words = name.trim().split(/\s+/).filter(Boolean);
+  return words.length >= 2 && words.every(word => /^[a-zA-Z]+$/.test(word));
+}
+
+const isValidEmail = (email: string) => {
+   return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+   
+}
+const isValidPhone = (phone: string) => {
+  return /^\d{10}$/.test(phone);
+}
+const isValidLinkedInURL = (url: string) => {
+  return /^https?:\/\/(www\.)?linkedin\.com\/(in|pub)\/[A-Za-z0-9\-_%]+\/?$/i.test(url);
+}
+const isValidGitHubURL = (url: string) => {
+  return /^https?:\/\/(www\.)?github\.com\/[A-Za-z0-9\-_.]+\/?$/i.test(url);
+}
+const isValidPersonIntroduction = (text: string) => {
+  return text.trim().length >= 20 && text.trim().length <= 500;
+}
+
 export default function CareersPage() {
   const [expandedJob, setExpandedJob] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -110,10 +136,14 @@ export default function CareersPage() {
     email: "",
     phone: "",
     position: "",
-    coverLetter: "",
+    linkedInURL:"",
+    gitHubURL:"",
+    personIntroduction: "",
     cv: null,
   });
   const { toast } = useToast();
+  const [error, setError] = useState<string | null>(null);
+  const [click, setClick] = useState(false);
 
   const handleInputChange = (field: keyof ApplicationForm, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -122,7 +152,7 @@ export default function CareersPage() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] || null;
 
-    // Optional: simple size cap (5 MB)
+    // size cap (5 MB)
     if (file && file.size > 5 * 1024 * 1024) {
       toast({
         title: "File too large",
@@ -145,6 +175,53 @@ export default function CareersPage() {
   const handleSubmit = async (e: React.FormEvent, jobTitle: string) => {
     e.preventDefault();
 
+    if(!isVaildFullName(formData.name)) {
+      toast({ 
+        title: "Invalid Name",
+        description: "Please enter a valid full name with at least two words.",
+      });
+      return;
+    }
+    if (!isValidEmail(formData.email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address (e.g., name@example.com) ",
+      });
+      return;
+    }
+
+    if (!isValidPhone(formData.phone)) {
+      toast({
+        title: "Invalid Phone Number",
+        description: "Please enter a valid 10-digit phone number.",
+      });
+      return;
+    }
+
+    if (!isValidLinkedInURL(formData.linkedInURL)) {
+      toast({
+        title: "Invalid LinkedIn URL",
+        description: "Please enter a valid LinkedIn profile URL.",
+      });
+      return;
+    }
+
+    if (!isValidGitHubURL(formData.gitHubURL)) {
+      toast({
+        title: "Invalid GitHub URL",
+        description: "Please enter a valid GitHub profile URL.",
+      });
+      return;
+    }
+
+    if (!isValidPersonIntroduction(formData.personIntroduction)) {
+      toast({
+        title: "Invalid Introduction",
+        description: "Please provide a brief introduction (20-500 characters).",
+      });
+      return;
+    }
+
     if (!formData.cv) {
       toast({
         title: "CV Required",
@@ -163,14 +240,16 @@ export default function CareersPage() {
         email: formData.email,
         phone: formData.phone,
         position: jobTitle,
-        coverLetter: formData.coverLetter,
+        linkedInURL: formData.linkedInURL, 
+        gitHubURL: formData.gitHubURL, 
+        personIntroduction: formData.personIntroduction,
         cvFileName: formData.cv.name,
         cvFileData: fileBase64,
         timestamp: new Date().toISOString(),
       };
 
       // TODO: paste your Web App "/exec" URL:
-      const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxQQw6AJUwCK-5arJ1Q0VLB3ROnkz83gnEEB_NLtEv1K5JUGYO45tb1Zm1LDA0H12nF/exec";
+      const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyrfcDDgFPmzvrkvcVSvXY9ItHML0rQdyml4m7ncB2YNiWz6AlVYVnn38oMLam7Mt1b/exec";
 
       const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
         method: "POST",
@@ -201,7 +280,9 @@ export default function CareersPage() {
           email: "",
           phone: "",
           position: "",
-          coverLetter: "",
+          linkedInURL: "", 
+          gitHubURL: "", 
+          personIntroduction : "",
           cv: null,
         });
         setExpandedJob(null);
@@ -276,7 +357,7 @@ export default function CareersPage() {
                       </Button>
                     </div> */}
                   
-{/* {`p-3 rounded-lg ${job.color} text-white shadow-lg`} */}
+
             </div>
 
             {jobs.map((job) => {
@@ -386,6 +467,9 @@ export default function CareersPage() {
                               <Input
                                 id="phone"
                                 type="tel"
+                                inputMode="numeric"
+                                pattern="\d{10}"
+                                maxLength={10}
                                 value={formData.phone}
                                 onChange={(e) => handleInputChange("phone", e.target.value)}
                                 required
@@ -401,14 +485,41 @@ export default function CareersPage() {
                             </div>
 
                             <div>
-                              <Label htmlFor="coverLetter" className="text-slate-300">
-                                Cover Letter
+                              <Label htmlFor="linkedInURL" className="text-slate-300">
+                                LinkedIn Profile URL
+                              </Label>
+                              <Input 
+                              id="linkedInURL" 
+                              value={formData.linkedInURL} 
+                              onChange={(e) => handleInputChange("linkedInURL", e.target.value)}
+                              required
+                              placeholder="Enter your LinkedIn profile URL"
+                              className="bg-slate-800/50 border-slate-600 text-slate-300" 
+                              />
+                            </div>
+
+                            <div>
+                              <Label htmlFor="gitHubURL" className="text-slate-300">
+                                GitHub URL
+                              </Label>
+                              <Input 
+                              id="gitHubURL" 
+                              value={formData.gitHubURL} 
+                              onChange={(e) => handleInputChange("gitHubURL", e.target.value)}
+                              required 
+                              placeholder="Enter your GitHub profile URL"
+                              className="bg-slate-800/50 border-slate-600 text-slate-300" />
+                            </div>
+
+                            <div>
+                              <Label htmlFor="personIntroduction" className="text-slate-300">
+                                Tell Us Something Interesting About You
                               </Label>
                               <Textarea
-                                id="coverLetter"
-                                placeholder="Tell us why you're interested in this position and what makes you a great fit..."
-                                value={formData.coverLetter}
-                                onChange={(e) => handleInputChange("coverLetter", e.target.value)}
+                                id="personIntroduction"
+                                placeholder="Please provide a brief insight about yourself that is not included in your CV focus on unique experiences, qualities, or achievements that highlight your individuality."
+                                value={formData.personIntroduction}
+                                onChange={(e) => handleInputChange("personIntroduction", e.target.value)}
                                 rows={6}
                               />
                             </div>
@@ -470,7 +581,7 @@ export default function CareersPage() {
 //     email: "frontend@example.com",
 //     phone: "+9876543210",
 //     position: "Test Position",
-//     coverLetter: "This is a frontend-triggered test.",
+//     personIntroduction: "This is a frontend-triggered test.",
 //     cvFileName: "frontend-test.pdf",
 //     cvFileData: smallPdfBase64,
 //     timestamp: new Date().toISOString(),
