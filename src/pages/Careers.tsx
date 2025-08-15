@@ -367,7 +367,15 @@ export default function CareersPage() {
       console.error("Submission error:", error);
       toast({
         title: "Submission Error",
-        description: error?.message || "There was an error submitting your application. Please try again.",
+    } catch (error: unknown) {
+      console.error("Submission error:", error);
+      let errorMessage = "There was an error submitting your application. Please try again.";
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+      toast({
+        title: "Submission Error",
+        description: errorMessage,
       });
     } finally {
       setIsSubmitting(false);
