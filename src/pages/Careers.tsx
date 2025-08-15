@@ -1,7 +1,8 @@
 "use client";
 
-import type React from "react";
-import { useState } from "react";
+import React from "react";
+import { ReactNode } from "react";
+import { useState, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { jobs } from "../constants/jobs";
@@ -17,6 +18,17 @@ interface ApplicationForm {
   personIntroduction: string;
   cv: File | null;
 }
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  linkedInURL?: string; 
+  gitHubURL?: string; 
+  personIntroduction?: string;
+  cv?: string;
+}
+
 
 const Button = ({
   children,
@@ -63,33 +75,55 @@ const Button = ({
   );
 };
 
-const Input = ({ className = "", ...props }: React.InputHTMLAttributes<HTMLInputElement>) => (
-  <input
-    className={`w-full px-3 py-2 rounded-lg border bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${className}`}
+const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement> & { error?: boolean }>(
+  ({ className = "", error, ...props }, ref) => (
+    <input
+      ref={ref}
+      className={`w-full px-3 py-2 rounded-lg border bg-slate-900/50 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all ${
+        error ? "border-red-500 focus:ring-red-500" : "border-slate-600 focus:ring-indigo-500"
+      } ${className}`}
+      {...props}
+    />
+  ),
+)
+
+Input.displayName = "Input"
+
+
+const Textarea = React.forwardRef<
+  HTMLTextAreaElement,
+  React.TextareaHTMLAttributes<HTMLTextAreaElement> & { error?: boolean }
+>(({ className = "", error, ...props }, ref) => (
+  <textarea
+    ref={ref}
+    className={`w-full px-3 py-2 rounded-lg border bg-slate-900/50 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:border-transparent resize-vertical transition-all ${
+      error ? "border-red-500 focus:ring-red-500" : "border-slate-600 focus:ring-indigo-500"
+    } ${className}`}
     {...props}
   />
-);
+))
+
+Textarea.displayName = "Textarea"
 
 const Label = ({
   children,
   htmlFor,
   className = "",
 }: {
-  children: React.ReactNode;
-  htmlFor?: string;
-  className?: string;
+  children: ReactNode
+  htmlFor?: string
+  className?: string
 }) => (
   <label htmlFor={htmlFor} className={`block text-sm font-medium mb-2 ${className}`}>
     {children}
   </label>
-);
+)
 
-const Textarea = ({ className = "", ...props }: React.TextareaHTMLAttributes<HTMLTextAreaElement>) => (
-  <textarea
-    className={`w-full px-3 py-2 rounded-lg border bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-vertical ${className}`}
-    {...props}
-  />
-);
+const ErrorMessage = ({ message }: { message?: string }) => {
+  if (!message) return null
+  return <p className="text-white text-sm mt-1 animate-in slide-in-from-top-1 duration-200">{message}</p>
+}
+
 
 const useToast = () => ({
   toast: ({ title, description }: { title: string; description: string; variant?: string }) => {
@@ -142,11 +176,24 @@ export default function CareersPage() {
     cv: null,
   });
   const { toast } = useToast();
-  const [error, setError] = useState<string | null>(null);
-  const [click, setClick] = useState(false);
+  const[formErrors, setFormErrors] = useState<FormErrors>({});
+
+  const fieldRefs = {
+    name: useRef<HTMLInputElement>(null),
+    email: useRef<HTMLInputElement>(null),
+    phone: useRef<HTMLInputElement>(null),
+    linkedInURL: useRef<HTMLInputElement>(null),
+    gitHubURL: useRef<HTMLInputElement>(null),
+    personIntroduction: useRef<HTMLTextAreaElement>(null),
+    cv: useRef<HTMLInputElement>(null),
+  }
+
 
   const handleInputChange = (field: keyof ApplicationForm, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+      if (formErrors[field as keyof FormErrors]) {
+      setFormErrors((prev) => ({ ...prev, [field]: undefined }))
+    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -154,14 +201,14 @@ export default function CareersPage() {
 
     // size cap (5 MB)
     if (file && file.size > 5 * 1024 * 1024) {
-      toast({
-        title: "File too large",
-        description: "Please upload a CV under 5 MB.",
-      });
-      return;
+      setFormErrors((prev) => ({ ...prev, cv: "File size must be under 5 MB." }))
+      return
+    }
+    if (file) {
+      setFormErrors((prev) => ({ ...prev, cv: undefined }))
     }
 
-    setFormData((prev) => ({ ...prev, cv: file }));
+    setFormData((prev) => ({ ...prev, cv: file }))
   };
 
   const fileToBase64DataUrl = (file: File) =>
@@ -172,68 +219,94 @@ export default function CareersPage() {
       reader.readAsDataURL(file);
     });
 
-  const handleSubmit = async (e: React.FormEvent, jobTitle: string) => {
-    e.preventDefault();
+    const validateForm = (): { isValid: boolean; errors: FormErrors; firstErrorField?: keyof FormErrors } => {
+    const errors: FormErrors = {}
+    let firstErrorField: keyof FormErrors | undefined
 
-    if(!isVaildFullName(formData.name)) {
-      toast({ 
-        title: "Invalid Name",
-        description: "Please enter a valid full name with at least two words.",
-      });
-      return;
-    }
-    if (!isValidEmail(formData.email)) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address (e.g., name@example.com) ",
-      });
-      return;
+    // Validate in order of appearance on form
+    if (!formData.name.trim()) {
+      errors.name = "Full name is required."
+      if (!firstErrorField) firstErrorField = "name"
+    } else if (!isVaildFullName(formData.name)) {
+      errors.name = "Please enter a valid full name with at least two words."
+      if (!firstErrorField) firstErrorField = "name"
     }
 
-    if (!isValidPhone(formData.phone)) {
-      toast({
-        title: "Invalid Phone Number",
-        description: "Please enter a valid 10-digit phone number.",
-      });
-      return;
+    if (!formData.email.trim()) {
+      errors.email = "Email address is required."
+      if (!firstErrorField) firstErrorField = "email"
+    } else if (!isValidEmail(formData.email)) {
+      errors.email = "Please enter a valid email address."
+      if (!firstErrorField) firstErrorField = "email"
     }
 
-    if (!isValidLinkedInURL(formData.linkedInURL)) {
-      toast({
-        title: "Invalid LinkedIn URL",
-        description: "Please enter a valid LinkedIn profile URL.",
-      });
-      return;
+    if (!formData.phone.trim()) {
+      errors.phone = "Phone number is required."
+      if (!firstErrorField) firstErrorField = "phone"
+    } else if (!isValidPhone(formData.phone)) {
+      errors.phone = "Please enter a valid 10-digit phone number."
+      if (!firstErrorField) firstErrorField = "phone"
     }
 
-    if (!isValidGitHubURL(formData.gitHubURL)) {
-      toast({
-        title: "Invalid GitHub URL",
-        description: "Please enter a valid GitHub profile URL.",
-      });
-      return;
+    if (!formData.linkedInURL.trim()) {
+      errors.linkedInURL = "LinkedIn profile URL is required."
+      if (!firstErrorField) firstErrorField = "linkedInURL"
+    } else if (!isValidLinkedInURL(formData.linkedInURL)) {
+      errors.linkedInURL = "Please enter a valid LinkedIn profile URL."
+      if (!firstErrorField) firstErrorField = "linkedInURL"
     }
 
-    if (!isValidPersonIntroduction(formData.personIntroduction)) {
-      toast({
-        title: "Invalid Introduction",
-        description: "Please provide a brief introduction (20-500 characters).",
-      });
-      return;
+    if (!formData.gitHubURL.trim()) {
+      errors.gitHubURL = "GitHub profile URL is required."
+      if (!firstErrorField) firstErrorField = "gitHubURL"
+    } else if (!isValidGitHubURL(formData.gitHubURL)) {
+      errors.gitHubURL = "Please enter a valid GitHub profile URL."
+      if (!firstErrorField) firstErrorField = "gitHubURL"
+    }
+
+    if (!formData.personIntroduction.trim()) {
+      errors.personIntroduction = "Please tell us something interesting about yourself."
+      if (!firstErrorField) firstErrorField = "personIntroduction"
+    } else if (!isValidPersonIntroduction(formData.personIntroduction)) {
+      errors.personIntroduction = "Please provide a brief introduction (20-500 characters)."
+      if (!firstErrorField) firstErrorField = "personIntroduction"
     }
 
     if (!formData.cv) {
-      toast({
-        title: "CV Required",
-        description: "Please upload your CV to continue.",
-      });
-      return;
+      errors.cv = "Please upload your CV/Resume."
+      if (!firstErrorField) firstErrorField = "cv"
+    }
+
+    return {
+      isValid: Object.keys(errors).length === 0,
+      errors,
+      firstErrorField,
+    }
+  }  
+
+  const handleSubmit = async (e: React.FormEvent, jobTitle: string) => {
+    e.preventDefault();
+
+    const validation = validateForm()
+
+        if (!validation.isValid) {
+      setFormErrors(validation.errors)
+
+      // Focus the first field with an error
+      if (validation.firstErrorField && fieldRefs[validation.firstErrorField]?.current) {
+        fieldRefs[validation.firstErrorField].current?.focus()
+        fieldRefs[validation.firstErrorField].current?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        })
+      }
+      return
     }
 
     setIsSubmitting(true);
 
     try {
-      const fileBase64 = await fileToBase64DataUrl(formData.cv);
+      const fileBase64 = await fileToBase64DataUrl(formData.cv!);
 
       const payload = {
         name: formData.name,
@@ -243,7 +316,7 @@ export default function CareersPage() {
         linkedInURL: formData.linkedInURL, 
         gitHubURL: formData.gitHubURL, 
         personIntroduction: formData.personIntroduction,
-        cvFileName: formData.cv.name,
+        cvFileName: formData.cv!.name,
         cvFileData: fileBase64,
         timestamp: new Date().toISOString(),
       };
@@ -285,6 +358,7 @@ export default function CareersPage() {
           personIntroduction : "",
           cv: null,
         });
+        setFormErrors({});
         setExpandedJob(null);
       } else {
         throw new Error(result?.message || "Submission failed");
@@ -306,6 +380,7 @@ export default function CareersPage() {
     } else {
       setExpandedJob(jobId);
       setFormData((prev) => ({ ...prev, position: jobTitle }));
+      setFormErrors({})
     }
   };
 
@@ -350,7 +425,6 @@ export default function CareersPage() {
                 </div>
               </div>
 
-                  
                     {/* <div className="mt-6 flex justify-center">
                       <Button onClick={testSendToAppsScript} variant="ghost">
                         Run Frontend Test
@@ -430,19 +504,21 @@ export default function CareersPage() {
                             Application Form
                           </h3>
 
-                          <form onSubmit={(e) => handleSubmit(e, job.title)} className="space-y-6">
+                          <form onSubmit={(e) => handleSubmit(e, job.title)}  className="space-y-6" noValidate>
                             <div className="grid md:grid-cols-2 gap-4">
                               <div>
                                 <Label htmlFor="name" className="text-slate-300">
                                   Full Name *
                                 </Label>
                                 <Input
+                                  ref={fieldRefs.name}
                                   id="name"
                                   value={formData.name}
                                   onChange={(e) => handleInputChange("name", e.target.value)}
-                                  required
                                   placeholder="Enter your full name"
+                                  error={!!formErrors.name}
                                 />
+                                <ErrorMessage message={formErrors.name} />
                               </div>
 
                               <div>
@@ -450,13 +526,15 @@ export default function CareersPage() {
                                   Email Address *
                                 </Label>
                                 <Input
+                                  ref={fieldRefs.email}
                                   id="email"
                                   type="email"
                                   value={formData.email}
                                   onChange={(e) => handleInputChange("email", e.target.value)}
-                                  required
                                   placeholder="Enter your email"
+                                  error={!!formErrors.email}
                                 />
+                               <ErrorMessage message={formErrors.email} />
                               </div>
                             </div>
 
@@ -465,6 +543,7 @@ export default function CareersPage() {
                                 Phone Number *
                               </Label>
                               <Input
+                                ref={fieldRefs.phone}
                                 id="phone"
                                 type="tel"
                                 inputMode="numeric"
@@ -472,9 +551,10 @@ export default function CareersPage() {
                                 maxLength={10}
                                 value={formData.phone}
                                 onChange={(e) => handleInputChange("phone", e.target.value)}
-                                required
                                 placeholder="Enter your phone number"
+                                error={!!formErrors.phone}
                               />
+                              <ErrorMessage message={formErrors.phone} />
                             </div>
 
                             <div>
@@ -489,13 +569,15 @@ export default function CareersPage() {
                                 LinkedIn Profile URL *
                               </Label>
                               <Input 
+                              ref={fieldRefs.linkedInURL}
                               id="linkedInURL" 
                               value={formData.linkedInURL} 
                               onChange={(e) => handleInputChange("linkedInURL", e.target.value)}
-                              required
                               placeholder="Enter your LinkedIn profile URL"
                               className="bg-slate-800/50 border-slate-600 text-slate-300" 
+                              error={!!formErrors.linkedInURL}
                               />
+                              <ErrorMessage message={formErrors.linkedInURL} />
                             </div>
 
                             <div>
@@ -503,12 +585,16 @@ export default function CareersPage() {
                                 GitHub URL *
                               </Label>
                               <Input 
+                              ref={fieldRefs.gitHubURL}
                               id="gitHubURL" 
                               value={formData.gitHubURL} 
                               onChange={(e) => handleInputChange("gitHubURL", e.target.value)}
-                              required 
                               placeholder="Enter your GitHub profile URL"
-                              className="bg-slate-800/50 border-slate-600 text-slate-300" />
+                              className="bg-slate-800/50 border-slate-600 text-slate-300" 
+                              error={!!formErrors.gitHubURL}
+                              />
+                              <ErrorMessage message={formErrors.gitHubURL} />
+                              
                             </div>
 
                             <div>
@@ -516,12 +602,15 @@ export default function CareersPage() {
                                 Tell Us Something Interesting About You *
                               </Label>
                               <Textarea
+                                ref={fieldRefs.personIntroduction}
                                 id="personIntroduction"
                                 placeholder="Please provide a brief insight about yourself that is not included in your CV focus on unique experiences, qualities, or achievements that highlight your individuality."
                                 value={formData.personIntroduction}
                                 onChange={(e) => handleInputChange("personIntroduction", e.target.value)}
                                 rows={6}
+                                error={!!formErrors.personIntroduction}
                               />
+                              <ErrorMessage message={formErrors.personIntroduction} />
                             </div>
 
                             <div>
@@ -530,15 +619,17 @@ export default function CareersPage() {
                               </Label>
                               <div className="mt-1">
                                 <Input
+                                  ref={fieldRefs.cv}
                                   id="cv"
                                   type="file"
                                   accept=".pdf,.doc,.docx"
                                   onChange={handleFileChange}
                                   required
-                                  className="file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-600 file:text-white hover:file:bg-indigo-700"
+                                  className={`file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-600 file:text-white hover:file:bg-indigo-700 ${formErrors.cv? "border-red-500" : ""}`}
                                 />
                               </div>
                               <p className="text-xs text-slate-500 mt-1">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
+                              <ErrorMessage message={formErrors.cv} />
                             </div>
 
                             <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
