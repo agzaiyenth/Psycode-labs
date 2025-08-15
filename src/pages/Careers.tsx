@@ -227,7 +227,7 @@ export default function CareersPage() {
     if (!formData.name.trim()) {
       errors.name = "Full name is required."
       if (!firstErrorField) firstErrorField = "name"
-    } else if (!isVaildFullName(formData.name)) {
+    } else if (!isValidFullName(formData.name)) {
       errors.name = "Please enter a valid full name with at least two words."
       if (!firstErrorField) firstErrorField = "name"
     }
