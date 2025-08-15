@@ -421,7 +421,7 @@ export default function CareersPage() {
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <MapPin className="h-5 w-5 text-indigo-400" />
-                  <span>Remote</span>
+                  <span>Remote & Hybrid Options </span>
                 </div>
               </div>
 
