@@ -340,7 +340,9 @@ export default function CareersPage() {
       const text = await response.text();
       let result: any;
       try {
-        result = JSON.parse(text);
+      let result: ApiResponse;
+      try {
+        result = JSON.parse(text) as ApiResponse;
       } catch {
         throw new Error("Invalid JSON response from server.");
       }
