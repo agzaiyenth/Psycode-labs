@@ -336,10 +336,10 @@ export default function CareersPage() {
         throw new Error(`HTTP ${response.status}: ${text.slice(0, 200)}`);
       }
 
+
       // Defensive parse (Apps Script sometimes returns text)
       const text = await response.text();
-      let result: any;
-      try {
+      type ApiResponse = { success: boolean; message?: string };
       let result: ApiResponse;
       try {
         result = JSON.parse(text) as ApiResponse;
@@ -365,10 +365,6 @@ export default function CareersPage() {
       } else {
         throw new Error(result?.message || "Submission failed");
       }
-    } catch (error: any) {
-      console.error("Submission error:", error);
-      toast({
-        title: "Submission Error",
     } catch (error: unknown) {
       console.error("Submission error:", error);
       let errorMessage = "There was an error submitting your application. Please try again.";
