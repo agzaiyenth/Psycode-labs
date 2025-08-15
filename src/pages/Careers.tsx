@@ -377,7 +377,7 @@ export default function CareersPage() {
                       </div>
 
                       <Button onClick={() => toggleForm(job.id, job.title)} variant="ghost" className="hover:scale-105 transform transition-all">
-                        {/* <Briefcase className="w-4 h-4 mr-2" /> */}
+                        
                         Apply Now
                       </Button>
                     </div>
@@ -486,7 +486,7 @@ export default function CareersPage() {
 
                             <div>
                               <Label htmlFor="linkedInURL" className="text-slate-300">
-                                LinkedIn Profile URL
+                                LinkedIn Profile URL *
                               </Label>
                               <Input 
                               id="linkedInURL" 
@@ -500,7 +500,7 @@ export default function CareersPage() {
 
                             <div>
                               <Label htmlFor="gitHubURL" className="text-slate-300">
-                                GitHub URL
+                                GitHub URL *
                               </Label>
                               <Input 
                               id="gitHubURL" 
@@ -513,7 +513,7 @@ export default function CareersPage() {
 
                             <div>
                               <Label htmlFor="personIntroduction" className="text-slate-300">
-                                Tell Us Something Interesting About You
+                                Tell Us Something Interesting About You *
                               </Label>
                               <Textarea
                                 id="personIntroduction"
