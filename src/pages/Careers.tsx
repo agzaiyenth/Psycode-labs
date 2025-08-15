@@ -139,7 +139,7 @@ const Card = ({ children, className = "" }: { children: React.ReactNode; classNa
 
 //validation handeler functions 
 
-const isVaildFullName=(name: string) => {
+const isValidFullName = (name: string) => {
   const words = name.trim().split(/\s+/).filter(Boolean);
   return words.length >= 2 && words.every(word => /^[a-zA-Z]+$/.test(word));
 }
