@@ -63,6 +63,11 @@ export const navigation = [
     title: "Contact",
     url: "/#reach-us",
   },
+  {
+    id: "4",
+    title: "Careers",
+    url: "careers",
+  },
 ];
 
 
