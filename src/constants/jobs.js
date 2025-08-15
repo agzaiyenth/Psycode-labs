@@ -1,16 +1,97 @@
-const jobs = [
-    {
-      id: 1,
-      title: "Graphic Designer",
-      company: "Psycode Lab",
-      type: "Contract",
-      location: "Remote",
-      description:
-        "We're looking for a creative and experienced Graphic Designer to join our team. The ideal candidate will have a strong portfolio demonstrating expertise in digital design, branding, and visual communication.",
-      formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeR3IzAUSKUeQ8i-x9WHUIFyLKYP99zUgXQThCHyu3vT4yrYQ/viewform?embedded=true",
-    },
-    
-  ];
-  
-  export default jobs;
-  
+import { Code, WorkflowIcon as Wordpress, Palette, Database, Globe } from "lucide-react"
+
+export const jobs = [
+  {
+    id: 1,
+    title: "Software Developer",
+    department: "Engineering",
+    location: "Remote",
+    type: "Contract",
+    description: "Join our dynamic development team to build cutting-edge web applications using modern technologies.",
+    requirements: [
+      "Strong proficiency in React.js and JavaScript/TypeScript",
+      "Experience with HTML5, CSS3, and responsive design",
+      "Understanding of RESTful APIs and modern development practices",
+      "Knowledge of version control systems (Git)",
+      "Problem-solving mindset and attention to detail",
+    ],
+    preferred: [
+      "Experience with Next.js framework",
+      "Familiarity with CMS platforms such as Strapi, WordPress, or Sanity",
+      "Knowledge of Node.js and backend development",
+      "Experience with cloud platforms (AWS / Azure)",
+    ],
+    icon: Code,
+    color: "text-blue-500",
+  },
+  {
+    id: 2,
+    title: "WordPress Developer",
+    department: "Web Development",
+    location: "Remote",
+    type: "Contract",
+    description: "Create and maintain WordPress websites, themes, and plugins for our diverse client portfolio.",
+    requirements: [
+      "Extensive experience with WordPress development",
+      "Proficiency in PHP, MySQL, HTML, CSS, and JavaScript",
+      "Experience with custom theme and plugin development",
+      "Knowledge of WordPress hooks, filters, and APIs",
+      "Understanding of web security best practices",
+    ],
+    preferred: [
+      "Experience with popular WordPress plugins (WooCommerce, ACF, etc.)",
+      "Knowledge of page builders (Elementor, Gutenberg)",
+      "Familiarity with WordPress multisite",
+      "Experience with WordPress REST API and headless WordPress",
+    ],
+    icon: Wordpress,
+    color: "text-indigo-500",
+  },
+  {
+    id: 3,
+    title: "UI/UX Designer",
+    department: "Design",
+    location: "Remote",
+    type: "Contract",
+    description:
+      "Design intuitive and beautiful user interfaces that enhance user experience across web and mobile platforms.",
+    requirements: [
+      "Proficiency in design tools (Figma, Adobe Creative Suite)",
+      "Strong understanding of user-centered design principles",
+      "Experience with wireframing and prototyping",
+      "Knowledge of responsive design and accessibility standards",
+      "Portfolio demonstrating UI/UX design skills",
+    ],
+    preferred: [
+      "Experience with design systems and component libraries",
+      "Knowledge of front-end technologies (HTML, CSS, JavaScript)",
+      "Familiarity with user research and testing methodologies",
+      "Experience with motion design and micro-interactions",
+    ],
+    icon: Palette,
+    color: "text-purple-500",
+  },
+  {
+    id: 4,
+    title: "Digital Marketing Specialist",
+    department: "Marketing",
+    location: "Remote",
+    type: "Contract",
+    description: "Drive our digital marketing initiatives and help grow our online presence across multiple channels.",
+    requirements: [
+      "Experience with digital marketing strategies and campaigns",
+      "Knowledge of SEO, SEM, and social media marketing",
+      "Proficiency in analytics tools (Google Analytics, etc.)",
+      "Content creation and copywriting skills",
+      "Understanding of conversion optimization",
+    ],
+    preferred: [
+      "Experience with marketing automation tools",
+      "Knowledge of web technologies and basic HTML/CSS",
+      "Familiarity with CRM systems and lead generation",
+      "Experience with email marketing platforms",
+    ],
+    icon: Globe,
+    color: "text-orange-500",
+  },
+]
