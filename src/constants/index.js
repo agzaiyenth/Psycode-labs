@@ -39,7 +39,8 @@ import {
   tailwindcss,
   whatsapp,
   wordpress,
-  yourlogo
+  yourlogo,
+  iit
 } from "../assets";
 
 export const navigation = [
@@ -78,83 +79,91 @@ export const companyLogos = [congress, amaizing, yourlogo, fusion, sudath];
 export const companyurllogos = [
   {
     id: "0",
-    imagelink: congress,
-    companyurl: "https://thecongress.co/"
+    imagelink: iit,
+    companyurl: "https://iit.ac.lk/"
   },
+
   {
     id: "1",
-    imagelink: amaizing,
-    companyurl: "https://amazingtribe.lk/"
+    imagelink: sdgp,
+    companyurl: "https://sdgp.lk/"
   },
   {
     id: "2",
-    imagelink: yourlogo,
-    companyurl: "https://sharouqalafia.com/"
+    imagelink: ccc,
+    companyurl: "https://coffee.lk"
   },
+
   {
     id: "3",
-    imagelink: fusion,
-    companyurl: "https://wedi.org.lk/"
-  },
-  {
-    id: "4",
-    imagelink: sudath,
-    companyurl: "https://sudathspeaks.lk/"
-  },
-  {
-    id: "5",
-    imagelink: hospital,
-    companyurl: "https://hospitalitypathriyadh.com/"
-  },
-  {
-    id: "6",
-    imagelink: travels,
-    companyurl: "https://www.ceylontravelstours.lk/"
-  },
-  {
-    id: "7",
-    imagelink: ashan,
-    companyurl: "https://www.ashantechnologist.lk/"
-  },
-  {
-    id: "8",
-    imagelink: island,
-    companyurl: "https://www.theislandmarketlk.com/"
-  },
-  {
-    id: "9",
-    imagelink: kenasto,
-    companyurl: "https://www.kenasto.com/"
-  },
-  {
-    id: "10",
-    imagelink: lexi,
-    companyurl: "https://www.lexi.lk/"
-  },
-  {
-    id: "11",
     imagelink: a2v,
     companyurl: "https://www.a2vflexosolution.com/"
   },
   {
+    id: "4",
+    imagelink: congress,
+    companyurl: "https://thecongress.co/"
+  },
+
+  {
+    id: "5",
+    imagelink: lexi,
+    companyurl: "https://www.lexi.lk/"
+  },
+  {
+    id: "6",
+    imagelink: amaizing,
+    companyurl: "https://amazingtribe.lk/"
+  },
+  {
+    id: "7",
+    imagelink: yourlogo,
+    companyurl: "https://sharouqalafia.com/"
+  },
+  {
+    id: "8",
+    imagelink: fusion,
+    companyurl: "https://wedi.org.lk/"
+  },
+  {
+    id: "9",
+    imagelink: sudath,
+    companyurl: "https://sudathspeaks.lk/"
+  },
+  {
+    id: "10",
+    imagelink: hospital,
+    companyurl: "https://hospitalitypathriyadh.com/"
+  },
+  {
+    id: "11",
+    imagelink: travels,
+    companyurl: "https://www.ceylontravelstours.lk/"
+  },
+  {
     id: "12",
+    imagelink: ashan,
+    companyurl: "https://www.ashantechnologist.lk/"
+  },
+  {
+    id: "13",
+    imagelink: island,
+    companyurl: "https://www.theislandmarketlk.com/"
+  },
+  {
+    id: "14",
+    imagelink: kenasto,
+    companyurl: "https://www.kenasto.com/"
+  },
+  {
+    id: "15",
     imagelink: sar,
     companyurl: "https://sarvodaya.store/"
   },
   {
-    id: "13",
-    imagelink: ccc,
-    companyurl: "https://coffee.lk"
-  },
-  {
-    id: "14",
+    id: "16",
     imagelink: msp,
     companyurl: "https://mspnetwork.lk/"
-  },
-  {
-    id: "15",
-    imagelink: sdgp,
-    companyurl: "https://sdgp.lk/"
   },
 ]
 

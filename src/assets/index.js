@@ -34,7 +34,7 @@ import lexi from "./lexi.svg";
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
 import heroBackground from "./hero/hero-background.jpg";
-
+import iit from "./iit.png";
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
 import figma from "./collaboration/figma.png";
@@ -88,6 +88,7 @@ import kenasto from "./kenasto.svg";
 import sdgp from "./sdgp.svg";
 
 export {
+  iit,
   sdgp,
   msp,
   sar,
