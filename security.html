@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WordPress Maintenance Required</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table {
+      border-spacing: 0;
+    }
+
+    img {
+      border: 0;
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      max-width: 600px;
+      background-color: #ffffff;
+      margin: 0 auto;
+    }
+
+    .header {
+      padding: 20px;
+      text-align: center;
+      background-color: #0a1a3a;
+    }
+
+    .header img {
+      max-height: 40px;
+      margin: 0 auto;
+    }
+
+    .content {
+      padding: 30px 25px;
+      color: #333333;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .content h1 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #111111;
+    }
+
+    .alert-box {
+      background-color: #fff3cd;
+      padding: 20px;
+      border-left: 4px solid #ffc107;
+      margin: 25px 0;
+      font-size: 15px;
+      border-radius: 4px;
+    }
+
+    .security-box {
+      background-color: #f8d7da;
+      padding: 20px;
+      border-left: 4px solid #dc3545;
+      margin: 25px 0;
+      font-size: 15px;
+      border-radius: 4px;
+    }
+
+    .info-box {
+      background-color: #d1ecf1;
+      padding: 20px;
+      border-left: 4px solid #17a2b8;
+      margin: 25px 0;
+      font-size: 15px;
+      border-radius: 4px;
+    }
+
+    .update-list {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+
+    .update-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .priority {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .priority-high {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .priority-medium {
+      background-color: #ffc107;
+      color: #000;
+    }
+
+    .priority-low {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #0f47f4;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+      .content {
+        padding: 20px;
+      }
+      .content h1 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <table width="100%" style="background-color: #f5f7fa;">
+    <tr>
+      <td align="center">
+        <table class="container" width="100%">
+
+          <!-- Header -->
+          <tr>
+            <td class="header">
+              <img src="https://i.ibb.co/6R3kv2GQ/unnamed.png" alt="Psycode Labs Logo"/>
+            </td>
+          </tr>
+
+          <!-- Content -->
+          <tr>
+            <td class="content">
+              <h1>Your WordPress Website Needs Attention</h1>
+
+              <p>Dear [Client Name],</p>
+
+              <p>
+                As part of our ongoing commitment to keeping your WordPress website secure, fast, and 
+                functioning optimally, we've identified several updates that need to be addressed 
+                for your site.
+              </p>
+
+              <div class="alert-box">
+                <strong>Action Required</strong><br>
+                Your WordPress website requires maintenance updates to ensure continued security and performance.
+              </div>
+
+              <h2 style="font-size: 18px; color: #111111; margin-top: 30px;">Updates Identified:</h2>
+
+              <div class="update-list">
+                <div class="update-item">
+                  <strong>WordPress Plugin Updates</strong>
+                  <span class="priority priority-high">HIGH PRIORITY</span>
+                  <br>
+                  <span style="color: #666; font-size: 14px;">
+                    Several WordPress plugins are outdated and require updates to patch security vulnerabilities 
+                    and improve functionality.
+                  </span>
+                </div>
+
+                <div class="update-item">
+                  <strong>Security Patches</strong>
+                  <span class="priority priority-high">HIGH PRIORITY</span>
+                  <br>
+                  <span style="color: #666; font-size: 14px;">
+                    Critical security updates are available to protect your WordPress site from potential threats 
+                    and vulnerabilities.
+                  </span>
+                </div>
+
+                <div class="update-item">
+                  <strong>WordPress Core Updates</strong>
+                  <span class="priority priority-medium">MEDIUM PRIORITY</span>
+                  <br>
+                  <span style="color: #666; font-size: 14px;">
+                    A new version of WordPress is available with bug fixes, performance improvements, 
+                    and enhanced features.
+                  </span>
+                </div>
+
+                <div class="update-item">
+                  <strong>Theme Updates</strong>
+                  <span class="priority priority-medium">MEDIUM PRIORITY</span>
+                  <br>
+                  <span style="color: #666; font-size: 14px;">
+                    Your WordPress theme has updates available to ensure compatibility with the latest 
+                    WordPress version.
+                  </span>
+                </div>
+
+                <div class="update-item">
+                  <strong>Content & Database Optimization</strong>
+                  <span class="priority priority-low">RECOMMENDED</span>
+                  <br>
+                  <span style="color: #666; font-size: 14px;">
+                    Database cleanup and content optimization can improve loading speeds and user experience.
+                  </span>
+                </div>
+              </div>
+
+              <div class="security-box">
+                <strong>Why This Matters:</strong><br><br>
+                Outdated WordPress plugins and core files are the number one target for hackers. Regular updates are 
+                essential to protect your website from malware, data breaches, and downtime.
+              </div>
+
+              <div class="info-box">
+                <strong>What Happens Next:</strong><br><br>
+                Our team will perform a comprehensive WordPress maintenance check, including full backup creation, 
+                plugin and core updates, compatibility testing, and performance verification to ensure 
+                everything runs smoothly.
+              </div>
+
+              <p>
+                <strong>Ready to proceed?</strong> Contact us today to schedule your WordPress 
+                maintenance or to discuss the specific updates needed for your site.
+              </p>
+
+              <div style="text-align: center;">
+                <a href="mailto:info@psycodelabs.lk" class="cta-button">Schedule Maintenance</a>
+              </div>
+
+              <p style="font-size: 14px; color: #666; margin-top: 30px;">
+                <em>Note: We recommend performing these updates as soon as possible to maintain 
+                optimal security and performance. If you have any questions about these updates, 
+                our technical team is happy to provide detailed explanations.</em>
+              </p>
+
+              <p>
+                Best regards,<br>
+                <strong>The Psycode Labs Team</strong><br>
+                <em>Keeping Your WordPress Site Secure & Updated</em>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding: 0 25px;">
+              <table width="100%">
+                <tr>
+                  <td style="height: 1px; background-color: #0f47f4;"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 30px 25px; background-color: #ffffff;">
+              
+              <!-- Top Links -->
+              <table width="100%">
+                <tr>
+                  <td style="font-size: 14px; color: #000000; padding-bottom: 20px; text-align: center;">
+                    <a href="mailto:info@psycodelabs.lk" 
+                       style="color: #000000; text-decoration: none;">
+                      Contact Us
+                    </a>
+                    &nbsp; | &nbsp;
+                    <a href="https://psycodelabs.lk" 
+                       target="_blank"
+                       style="color: #000000; text-decoration: none;">
+                      Visit Website
+                    </a>
+                    &nbsp; | &nbsp;
+                    <a href="https://psycodelabs.lk/support" 
+                       target="_blank"
+                       style="color: #000000; text-decoration: none;">
+                      Support Center
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Logo -->
+              <table width="100%">
+                <tr>
+                  <td style="padding: 10px 0; text-align: center;">
+                    <img src="https://i.ibb.co/4RfQg23y/B1-W2-1.jpg"
+                         alt="Psycode Labs Logo"
+                         width="120"
+                         style="display: inline-block;">
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Copyright -->
+              <table width="100%">
+                <tr>
+                  <td style="font-size: 14px; color: #000000; padding-top: 10px; text-align: center;">
+                    ©2026 Psycode Labs. All Rights Reserved
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Disclaimer -->
+              <table width="100%">
+                <tr>
+                  <td style="font-size: 12px; color: #666666; padding-top: 15px; line-height: 1.6; text-align: center;">
+                    This email was sent by Psycode Labs. For more information, visit our website at
+                    <a href="https://psycodelabs.lk"
+                       target="_blank"
+                       style="color: #0f47f4; text-decoration: none;">
+                      psycodelabs.lk
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
